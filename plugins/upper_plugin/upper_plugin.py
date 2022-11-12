@@ -15,7 +15,8 @@ class UpperPlugin(IPlugin):
             version="0.1"
         )
 
-    def invoke(self, plugin_name: str, text: str) -> Optional[str]:
-        if plugin_name == 'upper':
-            self.logger.debug(f'{self.meta}: Got following text: {text}')
-            return text.upper()
+    def invoke(self, **kwargs) -> Optional[str]:
+        # TODO: Here there should be more validation of kwargs
+        if kwargs["plugin_name"] == 'upper':
+            self.logger.debug(f'{self.meta}: Got following text: {kwargs["text"]}')
+            return kwargs["text"].upper()

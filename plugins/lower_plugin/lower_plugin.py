@@ -15,7 +15,8 @@ class LowerPlugin(IPlugin):
             version="0.1"
         )
 
-    def invoke(self, plugin_name: str, text: str) -> Optional[str]:
-        if plugin_name == 'lower':
-            self.logger.debug(f'{self.meta}: Got following text: {text}')
-            return text.lower()
+    def invoke(self, **kwargs) -> Optional[str]:
+        # TODO: Here there should be more validation of kwargs
+        if kwargs["plugin_name"] == 'lower':
+            self.logger.debug(f'{self.meta}: Got following text: {kwargs["text"]}')
+            return kwargs["text"].lower()
