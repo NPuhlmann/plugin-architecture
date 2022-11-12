@@ -1,0 +1,12 @@
+name: 'Upper Plugin'
+alias: 'upper-plugin'
+creator: 'npuhl'
+runtime:
+  main: 'upper_plugin.py'
+  tests:
+    - 'tests/core.py'
+repository: 'https://PointToYourGitRepoForThisPlugin.com/user/plugin'
+description: 'Dieses Plugin ist gedacht dafür, jeden Text zu vergrößern'
+version: '0.1'
+requirements:
+#  Falls jemand requirements hätte, könnte er sie hier einfügen (use careful in production, young padawan!)

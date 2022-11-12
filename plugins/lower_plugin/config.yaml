@@ -1,0 +1,12 @@
+name: 'Lower Plugin'
+alias: 'Lower-plugin'
+creator: 'npuhl'
+runtime:
+  main: 'lower_plugin.py'
+  tests:
+    - 'tests/core.py'
+repository: 'https://PointToYourGitRepoForThisPlugin.com/user/plugin'
+description: 'Dieses Plugin macht jeden Text to lower'
+version: '0.1'
+requirements:
+#  Falls jemand requirements hätte, könnte er sie hier einfügen (use careful in production, young padawan!)
